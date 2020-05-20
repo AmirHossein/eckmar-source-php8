@@ -1,0 +1,20 @@
+<div class="thumbnail">
+  @if($product->image !== null)
+  <img src="{{url($product->image)}}" alt="">
+  @else
+  No image
+  @endif
+  <div class="caption">
+    <h3>{{$product->name}}</h3>
+    <p>{{ str_limit($product->description, $limit = 120, $end = '...') }}</p>
+    <center>
+      @if($product->auction == true)
+      <a href="{{route('viewproduct',['cslug'=>$cslug,'uniqueid'=>$product->uniqueid])}}" class="btn btn-primary" role="button">Buy now for {{number_format($product->buyout*0.00000001, 2, '.', ',')}} <span class="glyphicon glyphicon-bitcoin" aria-hidden="true"></span></a>
+     <br><a href="{{route('viewproduct',['cslug'=>$cslug,'uniqueid'=>$product->uniqueid])}}" class="btn btn-default m-t-10" role="button">Bid</a>
+      @else
+      <a href="{{route('viewproduct',['cslug'=>$cslug,'uniqueid'=>$product->uniqueid])}}" class="btn btn-primary" role="button">Buy for {{$product->price*0.00000001}} <span class="glyphicon glyphicon-bitcoin" aria-hidden="true"></span></a>
+      @endif
+   </center>
+  </div>
+</div>
+<!-- REF -->
