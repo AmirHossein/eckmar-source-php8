@@ -973,7 +973,7 @@ boom@2.x.x:
   resolved "https://registry.yarnpkg.com/boom/-/boom-2.10.1.tgz#39c8918ceff5799f83f9492a848f625add0c766f"
   integrity sha1-OciRjO/1eZ+D+UkqhI9iWt0Mdm8=
   dependencies:
-    hoek "4.2.1"
+    hoek "2.x.x"
 
 bootstrap-sass@^3.4.1:
   version "3.4.1"
@@ -1744,7 +1744,7 @@ copy-webpack-plugin@^4.0.1:
     loader-utils "^1.1.0"
     minimatch "^3.0.4"
     p-limit "^1.0.0"
-    serialize-javascript "^2.1.1"
+    serialize-javascript "^1.4.0"
 
 core-js@^2.4.0, core-js@^2.5.0:
   version "2.6.11"
@@ -3977,7 +3977,7 @@ laravel-mix@^0.7.5:
     vue-loader "^10.0.2"
     vue-template-compiler "^2.1.9"
     webpack "^2.2.0"
-    webpack-dev-server "^3.1.11"
+    webpack-dev-server "^2.2.0"
     webpack-md5-hash "0.0.5"
     webpack-notifier "^1.4.1"
     webpack-stats-plugin "^0.1.4"
