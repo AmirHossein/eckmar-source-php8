@@ -11,7 +11,7 @@
     "bootstrap-sass": "^3.4.1",
     "jquery": "^3.5.0",
     "laravel-mix": "^0.7.5",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "vue": "^2.6.11"
   }
 }
