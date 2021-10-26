@@ -31,7 +31,7 @@
         @foreach($received as $r)
           <tr>
             <td>{{$r->From->username}} @if($r->viewed == false)<span class="label label-default">Not Viewed</span> @endif</td>
-            <td>{{str_limit($r->title, $limit = 20, $end = '...') }}</td>
+            <td>{{\Str::limit($r->title, $limit = 20, $end = '...') }}</td>
             <td>{{$r->created_at}}</td>
             <td><a href="{{route('viewmessage',['uniqueid'=>$r->uniqueid])}}" class="btn btn-default">Open</a></td>
           </tr>

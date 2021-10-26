@@ -31,7 +31,7 @@
         @foreach($sent as $s)
         <tr>
           <td>{{$s->To->username}}</td>
-          <td>{{str_limit($s->title, $limit = 20, $end = '...') }}</td>
+          <td>{{\Str::limit($s->title, $limit = 20, $end = '...') }}</td>
           <td>{{$s->created_at}}</td>
             <td><a href="{{route('viewmessage',['uniqueid'=>$s->uniqueid])}}" class="btn btn-default">Open</a></td>
         </tr>

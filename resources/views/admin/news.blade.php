@@ -17,7 +17,7 @@
       @foreach($news as $n)
         <tr>
           <td>{{$n->uniqueid}}</td>
-          <td>{{str_limit($n->title, $limit = 30, $end = '...') }}</td>
+          <td>{{\Str::limit($n->title, $limit = 30, $end = '...') }}</td>
           <td>{{$n->created_at}}</td>
           <td><a href="{{route('editnews',['uniqueid'=>$n->uniqueid])}}" class="btn btn-default">Edit</a></td>
         </tr>

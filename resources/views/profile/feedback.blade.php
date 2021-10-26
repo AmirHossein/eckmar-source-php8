@@ -32,7 +32,7 @@
           <td>@if($fd->for == $fd->buyer->id) {{$fd->seller->username}} @else {{$fd->buyer->username}} @endif</td>
           <td>@if($fd->positive == true) <span class="label label-success">Positive</span>@else <span class="label label-danger"> Negative</span> @endif</td>
           <td>@if($fd->seller->id == Auth::user()->id) Seller @else Buyer @endif</td>
-          <td>{{str_limit($fd->comment, $limit = 40, $end = '...') }}</td>
+          <td>{{\Str::limit($fd->comment, $limit = 40, $end = '...') }}</td>
           <td>{{$fd->created_at}}</td>
         </tr>
       @endforeach

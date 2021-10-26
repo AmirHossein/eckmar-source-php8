@@ -31,7 +31,7 @@
       <div class="m-l-50 col-md-7 ">
           <span class="font-size-24 " style="vertical-align:top">{{$product->name}}</span><br>
           <span>Sold by: {{$product->seller->username}}</span><br>
-          <span>{{ str_limit($product->description, $limit = 120, $end = '...') }}</span><br>
+          <span>{{ \Str::limit($product->description, $limit = 120, $end = '...') }}</span><br>
           @if($product->auction == true)
           <span class="font-size-12"> <span class="glyphicon glyphicon-time" aria-hidden="true"></span>Aucion ends: {{$product->end_date}}</span>
           @endif

@@ -96,7 +96,7 @@
       <tr>
         <td>{{$fd->buyer->username}}</td>
         <td>@if($fd->positive == true) <span class="label label-success">Positive</span>@else <span class="label label-danger"> Negative</span> @endif</td>
-        <td>{{str_limit($fd->comment, $limit = 40, $end = '...') }}</td>
+        <td>{{\Str::limit($fd->comment, $limit = 40, $end = '...') }}</td>
         <td>{{$fd->created_at}}</td>
       </tr>
       @endif

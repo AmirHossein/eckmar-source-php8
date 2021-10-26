@@ -137,7 +137,7 @@ class AdminController extends Controller {
         $category = new Category;
         $category->name = $request->cname;
         $category->uniqueid = 'CA' . \Str::random(28);
-        $category->slug = str_slug($request->cname, '-');
+        $category->slug = \Str::slug($request->cname, '-');
         $category->save();
         return redirect()->route('categories');
     }

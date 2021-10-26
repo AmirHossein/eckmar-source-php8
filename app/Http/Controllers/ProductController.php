@@ -222,7 +222,6 @@ class ProductController extends Controller {
 
     public function ViewProduct($cslug, $uniqueid, $item = 'description') {
         $category = Category::where('slug', $cslug)->first();
-        $categories = Category::all();
         if ($category == null) {
             return redirect()->route('home');
         }
@@ -231,7 +230,7 @@ class ProductController extends Controller {
             return redirect()->route('home');
         }
         if ($item !== 'description' && $item !== 'refund_policy' && $item !== 'feedback') {
-            $item == 'description';
+            $item = 'description';
         }
         if ($product->sold == true) {
             session()->flash('sold', true);

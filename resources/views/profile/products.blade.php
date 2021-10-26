@@ -13,7 +13,7 @@
     <tbody>
       @foreach($products as $product)
         <tr>
-          <td>{{str_limit($product->name, $limit = 25, $end = '...')}} @if($product->auction == true) <span class="label label-info">Auction</span>@endif</td>
+          <td>{{\Str::limit($product->name, $limit = 25, $end = '...')}} @if($product->auction == true) <span class="label label-info">Auction</span>@endif</td>
           @if($product->image !== null)
           <td><img class="img-rounded" src="{{url($product->image)}}" alt="" height="25px" width="25px"></td>
           @else

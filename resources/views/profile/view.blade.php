@@ -57,7 +57,7 @@
       </div>
       <div class="row m-t-15">
         @if($user->feedback()->orderBy('created_at','desc')->first() !== null)
-        <i><span> "{{str_limit($user->feedback()->orderBy('created_at','desc')->first()->comment, $limit = 40, $end = '...') }}"</span></i><br>
+        <i><span> "{{\Str::limit($user->feedback()->orderBy('created_at','desc')->first()->comment, $limit = 40, $end = '...') }}"</span></i><br>
        <em><span class="font-size-10">From: {{$user->feedback()->orderBy('created_at','desc')->first()->buyer->username}}</span></em>
        @endif
       </div>
@@ -115,7 +115,7 @@
       <tr>
         <td>{{$fd->buyer->username}}</td>
         <td>@if($fd->positive == true) <span class="label label-success">Positive</span>@else <span class="label label-danger"> Negative</span> @endif</td>
-        <td>{{str_limit($fd->comment, $limit = 40, $end = '...') }}</td>
+        <td>{{\Str::limit($fd->comment, $limit = 40, $end = '...') }}</td>
         <td>{{$fd->created_at}}</td>
       </tr>
       @endif

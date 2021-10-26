@@ -10,7 +10,7 @@ use Bitcoin;
 use DateTime;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Input;
+use Input;
 use Illuminate\Support\Facades\Validator;
 
 class WalletController extends Controller {

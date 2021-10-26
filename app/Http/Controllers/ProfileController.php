@@ -194,7 +194,7 @@ class ProfileController extends Controller {
             return redirect()->back();
         }
         if ($item !== 'profile' && $item !== 'pgp' && $item !== 'feedback') {
-            $item == 'profile';
+            $item = 'profile';
         }
         return view('profile.view')->with([
             'user' => $user,
