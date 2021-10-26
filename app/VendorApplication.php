@@ -4,9 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class VendorApplication extends Model
-{
-    public function user(){
-      return $this->belongsTo('App\User');
+class VendorApplication extends Model {
+    public function user() {
+        return $this->belongsTo('App\User');
     }
 }

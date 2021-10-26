@@ -1,18 +1,16 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
-class CreateDisputesTable extends Migration
-{
+class CreateDisputesTable extends Migration {
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()
-    {
+    public function up() {
         Schema::create('disputes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('uniqueid');
@@ -24,7 +22,7 @@ class CreateDisputesTable extends Migration
             $table->timestamps();
 
             $table->foreign('buyer_id')->references('id')->on('users');
-            $table->foreign('seller_id')->references('id')->on('users');        
+            $table->foreign('seller_id')->references('id')->on('users');
             $table->foreign('purchase_id')->references('id')->on('purchases');
         });
     }
@@ -34,8 +32,7 @@ class CreateDisputesTable extends Migration
      *
      * @return void
      */
-    public function down()
-    {
+    public function down() {
         Schema::dropIfExists('disputes');
     }
 }
