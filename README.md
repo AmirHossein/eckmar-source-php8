@@ -1,1 +1,1 @@
-Eckmar Shop compatible with Laravel 8 and PHP 8.
+Eckmar Shop for Laravel 8 and PHP 8.
