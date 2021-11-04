@@ -8,7 +8,7 @@ use Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-use Input;
+use Request as Input;
 
 class AuthController extends Controller {
     public function RegisterShow() {
